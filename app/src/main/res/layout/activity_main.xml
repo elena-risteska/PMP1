@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Search Input -->
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Kotlin"
+        android:hint="@string/enter_twitter_search_query"
+        android:padding="10dp"
+        android:background="@drawable/input_border"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Tag Input -->
+    <EditText
+        android:id="@+id/tagInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/tag_your_query"
+        android:padding="10dp"
+        android:background="@drawable/input_border"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tagged_searches"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- RecyclerView for Searches -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Clear Tags Button -->
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_tags"
+        android:backgroundTint="@color/purple_200"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>
